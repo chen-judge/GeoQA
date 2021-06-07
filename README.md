@@ -20,7 +20,7 @@ git clone https://github.com/chen-judge/GeoQA.git
 
 cd GeoQA
 
-Download the [<a href="https://www.dropbox.com/sh/9euqc78dvz6a01e/AAAabmDL1Dd8_2dx1wSJSi8Fa?dl=0">data.zip</a>], move it to GeoQA path, and unzip it.
+Download the <a href="https://www.dropbox.com/sh/9euqc78dvz6a01e/AAAabmDL1Dd8_2dx1wSJSi8Fa?dl=0">data.zip</a>, move it to GeoQA path, and unzip it.
 
 
 ### Training
