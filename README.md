@@ -5,16 +5,14 @@ Official Implement of paper “GeoQA: A Geometric Question Answering Benchmark T
 
 Download GeoQA benchmark: [<a href="https://www.dropbox.com/sh/9euqc78dvz6a01e/AAAabmDL1Dd8_2dx1wSJSi8Fa?dl=0">Dropbox</a>]
 
-Project page and code are coming soon.
 
 
 ## Install dependencies
 ```
 pip install allennlp==0.9.0 torch==1.2.0 opencv-python
 ```
-## Usage
+## Usage of NGS-Auxiliary
 
-Run the code of NGS-Auxiliary.
 
 ### Preparing
 
@@ -22,7 +20,7 @@ git clone https://github.com/chen-judge/GeoQA.git
 
 cd GeoQA
 
-Download the data.zip, move it to GeoQA path, and unzip it.
+Download the [<a href="https://www.dropbox.com/sh/9euqc78dvz6a01e/AAAabmDL1Dd8_2dx1wSJSi8Fa?dl=0">data.zip</a>], move it to GeoQA path, and unzip it.
 
 
 ### Training
@@ -31,7 +29,7 @@ Download the data.zip, move it to GeoQA path, and unzip it.
 
 ### Evaluation
     
-    allennlp evaluate save/test  data/GeoQA2.2/test.pk --include-package NGS_Aux_test --cuda-device 0
+    allennlp evaluate save/test data/GeoQA2.2/test.pk --include-package NGS_Aux_test --cuda-device 0
 
 
 
