@@ -1,1 +1,69 @@
-
+{
+  "dataset_reader": {
+    "type": "s2s_manual_reader",
+    "tokenizer": {
+      "word_splitter":{
+        "type": "just_spaces"
+      }
+    },
+    "source_token_indexer": {
+      "tokens": {
+        "type": "single_id"
+      }
+    },
+    "target_token_indexer": {
+      "tokens": {
+        "type": "single_id"
+      }
+    },
+  },
+  "train_data_path": "data/GeoQA2.2/train.pk",
+  "validation_data_path": "data/GeoQA2.2/dev.pk",
+  "test_data_path" : "data/GeoQA2.2/test.pk",
+  "evaluate_on_test": true,
+  "model": {
+    "type": "geo_s2s",
+    "max_decoding_steps": 16,
+    "beam_size": 10,
+    "target_embedding_dim": 512,
+    "scheduled_sampling_ratio": 0,
+    "resnet_pretrained": "data/pretrain/best_jigsaw_model_state_dict",
+//    "resnet_pretrained": "None",
+    "knowledge_points_ratio": 1,  // knowledge points
+    "source_embedder": {
+      "token_embedders": {
+        "tokens": {
+            "type": "embedding",
+            "embedding_dim": 256,
+            "trainable": true
+        }
+      }
+    },
+    "encoder": {
+      "type": "lstm",
+        "bidirectional": false,
+        "input_size": 256,
+        "hidden_size": 512,
+        "num_layers": 1
+    },
+  },
+  "iterator": {
+    "type": "basic",
+    "batch_size": 32
+  },
+  "trainer": {
+    "validation_metric": "+acc",
+    "num_epochs": 100,
+    "patience": 100, //30,
+    "grad_norm": 10.0,
+    "cuda_device": 0,
+    "optimizer": {
+      "type": "adam",
+      "lr": 1e-3,
+      "parameter_groups": [
+        [["mcan", "channel_transform", "attflat_img", "attflat_lang", "decode_transform"], {"lr": 1e-5}],
+        [["resnet"], {"lr": 0}]
+      ]
+    }
+  }
+}
