@@ -28,8 +28,14 @@ Download the <a href="https://www.dropbox.com/sh/9euqc78dvz6a01e/AAAabmDL1Dd8_2d
     allennlp train config/NGS_Aux.json --include-package NGS_Aux -s save/test
 
 ### Evaluation
+Evaluate your trained model:
     
-    allennlp evaluate save/test data/GeoQA2.2/test.pk --include-package NGS_Aux_test --cuda-device 0
+    allennlp evaluate save/test  data/GeoQA2.2/test.pk --include-package NGS_Aux_test --cuda-device 0
+
+Or, you can use our checkpoint <a href="https://www.dropbox.com/sh/9euqc78dvz6a01e/AAAabmDL1Dd8_2dx1wSJSi8Fa?dl=0">NGS_Aux_CKPT.zip</a>, move it to save path, unzip it, and run:
+
+    allennlp evaluate save/NGS_Aux_CKPT  data/GeoQA2.2/test.pk --include-package NGS_Aux_test --cuda-device 0
+
 
 
 
