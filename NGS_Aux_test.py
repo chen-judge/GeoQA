@@ -369,8 +369,8 @@ class SimpleSeq2Seq(Model):
                     #     point_acc = self.multi_label_evaluation(point_pred[b].unsqueeze(0), point_label[b].unsqueeze(0))
                     #     self.point_acc_list.append(point_acc)
 
-                with open('save/GeoQA2.2/test.json', 'w') as f:
-                    json.dump(self.save_results, f)
+                # with open('save/test.json', 'w') as f:
+                #    json.dump(self.save_results, f)
 
                 if random.random() < 0.05:
                     print('selected_programs', selected_programs)
