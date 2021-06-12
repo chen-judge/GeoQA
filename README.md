@@ -7,10 +7,9 @@ Download GeoQA benchmark: [<a href="https://www.dropbox.com/sh/9euqc78dvz6a01e/A
 
 
 
-## Install dependencies
-```
-pip install allennlp==0.9.0 torch==1.2.0 opencv-python
-```
+## Environment
+python=3.6
+
 ## Usage of NGS-Auxiliary
 
 
@@ -19,6 +18,8 @@ pip install allennlp==0.9.0 torch==1.2.0 opencv-python
 git clone https://github.com/chen-judge/GeoQA.git
 
 cd GeoQA
+
+pip install requirements.txt
 
 Download the <a href="https://www.dropbox.com/sh/9euqc78dvz6a01e/AAAabmDL1Dd8_2dx1wSJSi8Fa?dl=0">data.zip</a>, move it to GeoQA path, and unzip it.
 
