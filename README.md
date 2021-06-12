@@ -10,6 +10,9 @@ Download GeoQA benchmark: [<a href="https://www.dropbox.com/sh/9euqc78dvz6a01e/A
 ## Environment
 python=3.6
 
+allennlp==0.9.0
+
+Document for <a href="http://docs.allennlp.org/v0.9.0/index.html">allennlp</a>
 ## Usage of NGS-Auxiliary
 
 
