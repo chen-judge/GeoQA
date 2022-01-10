@@ -3,7 +3,7 @@
 
 Jiaqi Chen, Jianheng Tang, Jinghui Qin, Xiaodan Liang, Lingbo Liu, Eric P. Xing, Liang Lin. “GeoQA: A Geometric Question Answering Benchmark Towards Multimodal Numerical Reasoning”. Annual Meeting of the Association for Computational Linguistics (Findings of ACL 2021). [<a href="https://arxiv.org/abs/2105.14517">PDF</a>]
 
-Download GeoQA benchmark: [<a href="https://www.dropbox.com/sh/9euqc78dvz6a01e/AAAabmDL1Dd8_2dx1wSJSi8Fa?dl=0">Dropbox</a>]
+Download GeoQA benchmark: [<a href="https://drive.google.com/drive/folders/1fiLTJUq7EPiZHs6AxundNfNEDLw4gtP5?usp=sharing">Google Drive</a>]
 
 
 
@@ -24,7 +24,7 @@ cd GeoQA
 
 pip install -r requirements.txt
 
-Download the <a href="https://www.dropbox.com/sh/9euqc78dvz6a01e/AAAabmDL1Dd8_2dx1wSJSi8Fa?dl=0">data.zip</a>, move it to GeoQA path, and unzip it.
+Download the <a href="https://drive.google.com/drive/folders/1fiLTJUq7EPiZHs6AxundNfNEDLw4gtP5?usp=sharing">data.zip</a>, move it to GeoQA path, and unzip it.
 
 
 ### Training
@@ -34,17 +34,17 @@ Download the <a href="https://www.dropbox.com/sh/9euqc78dvz6a01e/AAAabmDL1Dd8_2d
 ### Evaluation
 Evaluate your trained model:
     
-    allennlp evaluate save/test  data/GeoQA2.2/test.pk --include-package NGS_Aux_test --cuda-device 0
+    allennlp evaluate save/test  data/GeoQA3/test.pk --include-package NGS_Aux_test --cuda-device 0
 
-Or, you can use our checkpoint <a href="https://www.dropbox.com/sh/9euqc78dvz6a01e/AAAabmDL1Dd8_2dx1wSJSi8Fa?dl=0">NGS_Aux_CKPT.zip</a>, move it to save path, unzip it, and run:
+Or, you can use our checkpoint <a href="https://drive.google.com/drive/folders/1fiLTJUq7EPiZHs6AxundNfNEDLw4gtP5?usp=sharing">NGS_Aux_CKPT.zip</a>, move it to save path, unzip it, and run:
 
-    allennlp evaluate save/NGS_Aux_CKPT  data/GeoQA2.2/test.pk --include-package NGS_Aux_test --cuda-device 0
+    allennlp evaluate save/NGS_Aux_CKPT  data/GeoQA3/test.pk --include-package NGS_Aux_test --cuda-device 0
     
 The result of our checkpoint should be:
 
 | Method | Acc | Angle | Length | Other | 
 | --- | --- |  --- | --- |--- |
-| NGS-Auxiliary | 60.7 | 72.0 | 47.0 | 44.4 |
+| NGS-Auxiliary | 60.0 | 71.5 | 48.8 | 29.6 |
 
 
 
