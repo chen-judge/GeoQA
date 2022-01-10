@@ -5,7 +5,7 @@ Jiaqi Chen, Jianheng Tang, Jinghui Qin, Xiaodan Liang, Lingbo Liu, Eric P. Xing,
 
 Download GeoQA benchmark: [<a href="https://drive.google.com/drive/folders/1fiLTJUq7EPiZHs6AxundNfNEDLw4gtP5?usp=sharing">Google Drive</a>]
 
-
+01/10/2022 Update: We find some minor errors in data annotation. These errors have been fixed, and both paper on arXiv and this project have been updated.
 
 ## Environment
 python=3.6
